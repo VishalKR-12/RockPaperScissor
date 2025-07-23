@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ROCK PAPER SCISSORS</h1>
+            <p class="subtitle">Epic battle of wit and chance! Best of 5 rounds.</p>
+        </header>
+
+        <div class="game-area" id="gameArea">
+            <div class="scores">
+                <div class="score-card">
+                    <div class="score-icon">👤</div>
+                    <div class="score-value" id="playerScore">0</div>
+                    <div class="score-label">You</div>
+                </div>
+
+                <div class="round-info">
+                    <div class="round-text">Round <span id="currentRound">1</span> / 5</div>
+                    <div class="vs-text">VS</div>
+                </div>
+
+                <div class="score-card">
+                    <div class="score-icon">🤖</div>
+                    <div class="score-value" id="computerScore">0</div>
+                    <div class="score-label">Computer</div>
+                </div>
+            </div>
+
+            <div class="choices-container" id="choicesContainer" style="display: none;">
+                <div class="choice-display">
+                    <div class="choice-title">Your Choice</div>
+                    <div class="choice-icon" id="playerChoice"></div>
+                    <div class="choice-name" id="playerChoiceName"></div>
+                </div>
+
+                <div class="choice-display">
+                    <div class="choice-title">Computer Choice</div>
+                    <div class="choice-icon" id="computerChoice"></div>
+                    <div class="choice-name" id="computerChoiceName"></div>
+                </div>
+            </div>
+
+            <div class="result-message" id="resultMessage"></div>
+
+            <div class="game-buttons">
+                <button class="choice-btn" data-choice="rock">
+                    <span class="choice-emoji">🪨</span>
+                    <span class="choice-text">Rock</span>
+                </button>
+                <button class="choice-btn" data-choice="paper">
+                    <span class="choice-emoji">📄</span>
+                    <span class="choice-text">Paper</span>
+                </button>
+                <button class="choice-btn" data-choice="scissors">
+                    <span class="choice-emoji">✂️</span>
+                    <span class="choice-text">Scissors</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="game-over" id="gameOver" style="display: none;">
+            <div class="trophy">🏆</div>
+            <h2 class="game-over-title" id="gameOverTitle">Game Over!</h2>
+            <p class="game-over-message" id="gameOverMessage">Computer wins this time!</p>
+            <p class="final-score" id="finalScore">Final Score: 0 - 2</p>
+            <button class="play-again-btn" id="playAgainBtn">🔄 Play Again</button>
+        </div>
+
+        <div class="how-to-play">
+            <div class="how-to-play-title">🎯 How to Play</div>
+            <div class="rules">
+                <div class="rule">
+                    <div class="rule-icons">🪨 → ✂️</div>
+                    <div class="rule-text">Rock<br>Crushes Scissors</div>
+                </div>
+                <div class="rule">
+                    <div class="rule-icons">📄 → 🪨</div>
+                    <div class="rule-text">Paper<br>Covers Rock</div>
+                </div>
+                <div class="rule">
+                    <div class="rule-icons">✂️ → 📄</div>
+                    <div class="rule-text">Scissors<br>Cuts Paper</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
